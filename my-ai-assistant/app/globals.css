@@ -1,0 +1,14 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+/* 1. Register the dark variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 2. Force the root and body backgrounds to adapt to the dark class */
+html, body {
+  @apply bg-slate-50 text-slate-900 transition-colors duration-200;
+}
+
+html.dark, html.dark body {
+  @apply bg-slate-950 text-slate-100;
+}
